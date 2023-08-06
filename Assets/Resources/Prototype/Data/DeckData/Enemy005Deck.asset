@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532cfecb89e172048b425e2e88ef9035, type: 3}
+  m_Name: Enemy005Deck
+  m_EditorClassIdentifier: 
+  _deck:
+  - {fileID: 11400000, guid: c493962b5df71f94b98f86c6eec31d0e, type: 2}
+  - {fileID: 11400000, guid: c82fb0efb85830547a3dc60d0d63e422, type: 2}
+  - {fileID: 11400000, guid: 63416161cbab3da40a32ca65600599e3, type: 2}
+  - {fileID: 11400000, guid: fd998af7aad20b341ba43ed66f4a164e, type: 2}
+  - {fileID: 11400000, guid: 3ad3a34568b02d848852bfca07fcb012, type: 2}
+  - {fileID: 11400000, guid: 834c59954c88b5f468532c27c93911d3, type: 2}
+  - {fileID: 11400000, guid: 27295b3a32a70b94aaa67609b2a546af, type: 2}
+  _count: 01000000010000000100000001000000010000000100000001000000
+  _costText: 40

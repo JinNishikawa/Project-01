@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba1f842afd66143b9fceae716f83bf, type: 3}
+  m_Name: AnimGolem
+  m_EditorClassIdentifier: 
+  _walk:
+  - {fileID: -1649534407, guid: a844b1d91fd583f4daca4a44b4e4df51, type: 3}
+  - {fileID: 377834158, guid: a844b1d91fd583f4daca4a44b4e4df51, type: 3}
+  - {fileID: 1757303425, guid: a844b1d91fd583f4daca4a44b4e4df51, type: 3}
+  - {fileID: 554517151, guid: a844b1d91fd583f4daca4a44b4e4df51, type: 3}
+  - {fileID: 219061236, guid: a844b1d91fd583f4daca4a44b4e4df51, type: 3}
+  - {fileID: -1162113819, guid: a844b1d91fd583f4daca4a44b4e4df51, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  _normalWalk:
+  - {fileID: -202647738, guid: bee365355a8866d40b2ea60b79666979, type: 3}
+  - {fileID: -1841577220, guid: bee365355a8866d40b2ea60b79666979, type: 3}
+  - {fileID: 1817238336, guid: bee365355a8866d40b2ea60b79666979, type: 3}
+  - {fileID: -300218868, guid: bee365355a8866d40b2ea60b79666979, type: 3}
+  - {fileID: -2126117398, guid: bee365355a8866d40b2ea60b79666979, type: 3}
+  - {fileID: 1453368110, guid: bee365355a8866d40b2ea60b79666979, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  _wait:
+  - {fileID: -539174373, guid: 51cd122fc316a284d9d15e59cc5e334d, type: 3}
+  - {fileID: -1339597048, guid: 51cd122fc316a284d9d15e59cc5e334d, type: 3}
+  - {fileID: 289052397, guid: 51cd122fc316a284d9d15e59cc5e334d, type: 3}
+  - {fileID: -2014226642, guid: 51cd122fc316a284d9d15e59cc5e334d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  - {fileID: 21300000, guid: 08eef566b306d8b41b0cb9f69a123168, type: 3}
+  _normalWait:
+  - {fileID: -1402140864, guid: 5ffcec669d0e0ef47b10d7d7b8c18dc3, type: 3}
+  - {fileID: -1353235224, guid: 5ffcec669d0e0ef47b10d7d7b8c18dc3, type: 3}
+  - {fileID: 1597342603, guid: 5ffcec669d0e0ef47b10d7d7b8c18dc3, type: 3}
+  - {fileID: 1544120190, guid: 5ffcec669d0e0ef47b10d7d7b8c18dc3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  - {fileID: 21300000, guid: 4813390f4f221384a920873d298a084d, type: 3}
+  _attack:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _normalAttack:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _AnimTime:
+  - 0.1
+  - 0.1
+  - 0.1

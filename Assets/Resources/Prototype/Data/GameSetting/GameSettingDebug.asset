@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e0d84afc5689b4093e335c566832a4, type: 3}
+  m_Name: GameSettingDebug
+  m_EditorClassIdentifier: 
+  _PlayerColor:
+  - {r: 0.2688679, g: 1, b: 0.5985942, a: 1}
+  - {r: 1, g: 0.9721711, b: 0, a: 1}
+  _TileBase: {fileID: 11400000, guid: 072d2b8013d5a3e47b05447f46574fe2, type: 2}
+  _TileBaseLine: {fileID: 0}
+  _NormalColor: {r: 0.7529412, g: 1, b: 0.39215687, a: 1}
+  _ExecColor: {r: 1, g: 0.36862746, b: 0.23921569, a: 1}
+  _SelectColor: {r: 0.23921569, g: 0.62352943, b: 1, a: 1}
+  _MaxHand: 5
+  _MoveToHandTime: 0.8
+  _CardMoveTime: 0.3
+  _MoveToDeckTime: 1
+  _FieldMoveTime: 2
+  _MaxScaleRate: 1.5
+  _ActionTime: 0.1
+  _MoveDistanceRate: 0.3
+  _InitGridCount: 15
+  _MyFieldAlpha: 200
+  _SoldierWaitTime:
+  - 5
+  - 4
+  - 3
+  - 2
+  - 1
+  _SoldierForceSpeed: 10
+  _CardSurfaceFront:
+  - {fileID: 2800000, guid: 62733ca420387aa4f8c10376aab6b597, type: 3}
+  - {fileID: 2800000, guid: ab84d3ba49ea09147b06ce1add491c80, type: 3}
+  _CardLine:
+  - {fileID: 2800000, guid: bc641d49fe0a1144ca657f639f908319, type: 3}
+  - {fileID: 2800000, guid: bf9abaa9156fd7f4a92e4a56a8d79ab7, type: 3}
+  _CardSurfaceBack:
+  - {fileID: 2800000, guid: ea2cf4d3920cfbd49ac2fce80a541a41, type: 3}
+  - {fileID: 2800000, guid: fbac601ca98bbae40b69f431b74244cf, type: 3}
+  _SpeedStar:
+  - {fileID: 2800000, guid: 46746fd12b008be4abba32d75a5fc7a6, type: 3}
+  - {fileID: 2800000, guid: 8e3b8c4bba5828b41a0da757e5dd08ae, type: 3}
+  - {fileID: 2800000, guid: 95230879714147e46bad60ab621c40b5, type: 3}
+  - {fileID: 2800000, guid: de8c7b369c156d5418462f5a4bc7bf52, type: 3}
+  - {fileID: 2800000, guid: 5b2a58870159282469db5c284bf1722c, type: 3}
+  _EffectData: {fileID: 11400000, guid: 38a4f7a482c75094da994c522f44f52a, type: 2}
+  _EnemySetting: {fileID: 11400000, guid: 6c6e418ec8f79cd48b3952311cf9cd14, type: 2}
+  _SystemSetting: {fileID: 11400000, guid: 9db4bdbebe5f2bd49ad495834cf20a54, type: 2}

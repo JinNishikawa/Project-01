@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f42bb44191054341912faa240ae7711, type: 3}
+  m_Name: EffectData
+  m_EditorClassIdentifier: 
+  _HPExplosion: {fileID: 1073472249743824446, guid: 44a14a52ed9f9e544813dadb0410017b, type: 3}
+  _SoldierAppear: {fileID: 7985001656654414593, guid: 254602625afbe0d47ba59788621a643a, type: 3}
+  _MagicCircle: {fileID: 0}
+  _Summon: {fileID: 3288131160809435959, guid: ab8468c92bb761a4781f630b8f00b438, type: 3}
+  _WalkSmoke: {fileID: 2067035205134813523, guid: 312376a9ac93b6248a7cf841ad8b44fd, type: 3}
+  _OutLine: {fileID: 652138895161404845, guid: caf1442200f046e44939b27e24ea220c, type: 3}

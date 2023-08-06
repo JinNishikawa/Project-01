@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532cfecb89e172048b425e2e88ef9035, type: 3}
+  m_Name: StarterDeck_debug
+  m_EditorClassIdentifier: 
+  _deck:
+  - {fileID: 11400000, guid: a1a21a56f782d29408f078e72936dbe5, type: 2}
+  _count: 14000000
+  _costText: 100

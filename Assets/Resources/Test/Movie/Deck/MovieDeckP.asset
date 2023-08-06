@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532cfecb89e172048b425e2e88ef9035, type: 3}
+  m_Name: MovieDeckP
+  m_EditorClassIdentifier: 
+  _deck:
+  - {fileID: 11400000, guid: d85ccfcecae2b0d40a68bc95f150afdc, type: 2}
+  - {fileID: 11400000, guid: 3ca8f892b58491141b7ae553f28b7006, type: 2}
+  - {fileID: 11400000, guid: c267a4968f6371d4a9c579b09c3dcfe4, type: 2}
+  - {fileID: 11400000, guid: 41f96b93cacdeba4ebff2781fcfda1d6, type: 2}
+  - {fileID: 11400000, guid: 25e585ab302403e4f8abc186de1a7056, type: 2}
+  _count: 0100000001000000010000000100000001000000
+  _costText: 0

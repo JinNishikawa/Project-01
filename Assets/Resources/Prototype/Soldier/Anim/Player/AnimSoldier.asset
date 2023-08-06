@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba1f842afd66143b9fceae716f83bf, type: 3}
+  m_Name: AnimSoldier
+  m_EditorClassIdentifier: 
+  _walk:
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -930639631, guid: 52433ec94319a4f41900f2341f8ea4f3, type: 3}
+  - {fileID: 1375008751, guid: 52433ec94319a4f41900f2341f8ea4f3, type: 3}
+  - {fileID: -2118466536, guid: 52433ec94319a4f41900f2341f8ea4f3, type: 3}
+  - {fileID: 657879581, guid: 52433ec94319a4f41900f2341f8ea4f3, type: 3}
+  _normalWalk:
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -1633424957, guid: c299a6aff6937714f9f7389cd1ede37c, type: 3}
+  - {fileID: -1856146018, guid: c299a6aff6937714f9f7389cd1ede37c, type: 3}
+  - {fileID: -2003161524, guid: c299a6aff6937714f9f7389cd1ede37c, type: 3}
+  - {fileID: 222698737, guid: c299a6aff6937714f9f7389cd1ede37c, type: 3}
+  _wait:
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 21300000, guid: 482a0e6510264c349862202057ff17c9, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -1776337516, guid: f503058ee98e5264aa6fbb1c5c922c9f, type: 3}
+  - {fileID: -1940458512, guid: f503058ee98e5264aa6fbb1c5c922c9f, type: 3}
+  - {fileID: -1195764641, guid: f503058ee98e5264aa6fbb1c5c922c9f, type: 3}
+  - {fileID: -1130505277, guid: f503058ee98e5264aa6fbb1c5c922c9f, type: 3}
+  _normalWait:
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 21300000, guid: 976072276c10d4146b4896722b684071, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 820911058, guid: 1a4691ed99f8583439d6736f419c159a, type: 3}
+  - {fileID: 621741839, guid: 1a4691ed99f8583439d6736f419c159a, type: 3}
+  - {fileID: 1066544523, guid: 1a4691ed99f8583439d6736f419c159a, type: 3}
+  - {fileID: 1993262624, guid: 1a4691ed99f8583439d6736f419c159a, type: 3}
+  _attack:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _normalAttack:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _AnimTime:
+  - 0.1
+  - 0.1
+  - 0.1

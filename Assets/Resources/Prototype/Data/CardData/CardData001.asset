@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8843ed7837f39a54b9fa2cbf5552ba2b, type: 3}
+  m_Name: CardData001
+  m_EditorClassIdentifier: 
+  _Rarity: 0
+  _Name: 
+  _Formation: {fileID: 3701528888528041864, guid: bdd054d5ca595d74f8f2f454bae74c78, type: 3}
+  _ReadyTime: 1
+  _Step: 4
+  _Cost: 1
+  _Character:
+  - {fileID: 11400000, guid: d0a282a0b9c067d4494dc10571702a6c, type: 2}
+  - {fileID: 11400000, guid: f0460e7e4f65b2c44a4532c65ee7746b, type: 2}
+  _SoldierScale:
+  - 1
+  - 1
+  _isOnly: 0000

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214304e64d8f7a0409130f2990aa8f4e, type: 3}
+  m_Name: SystemSettingV
+  m_EditorClassIdentifier: 
+  _BattleFieldColors:
+  - {r: 0, g: 0.3519249, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  _Style: 1
+  _SoldierCardSize: 0.05
+  _SoldierFieldSize: 1
+  _SoldierReadySize: 0.6
+  _SoldierGrabSize: 0.25
+  _Material:
+  - {fileID: 2100000, guid: c034f032c99c81e48acf9c60cc5850b9, type: 2}
+  - {fileID: 2100000, guid: 6893c3497a3659d42948403a28be07ba, type: 2}
+  _SoldierEmissionColor: {r: 0, g: 0, b: 0, a: 0}
+  _OutlineSize: 0.05
+  _OutlineColor: {r: 1024, g: 994.86975, b: 0, a: 1}
+  _DissolveMaterial: {fileID: 2100000, guid: cedfe36f5733b5f438304a5387319a45, type: 2}
+  _GameSpeed: 1

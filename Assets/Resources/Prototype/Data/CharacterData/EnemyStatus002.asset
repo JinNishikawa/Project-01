@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901fc90225c08664e849aecf9e2a2f39, type: 3}
+  m_Name: EnemyStatus002
+  m_EditorClassIdentifier: 
+  _Name: "\u30D6\u30BF"
+  _CharacterFaceTexture: {fileID: 21300000, guid: 355a05ed474057947a53346c5395ce21, type: 3}
+  _CharacterTexture: {fileID: 2800000, guid: 355a05ed474057947a53346c5395ce21, type: 3}
+  _Information: "\u30D6\u30BF\u60C5\u5831"
+  _Life: 15
+  _behaviourTree: {fileID: 11400000, guid: aa47d424e480cc7499ef4cfae4f4b5f9, type: 2}
+  _DeckData: {fileID: 11400000, guid: 9fec96382af731c47960f8fb9b0ef534, type: 2}
