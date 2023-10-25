@@ -1,0 +1,7 @@
+﻿version: 1.0.0
+character:
+  id: 1
+  name: テスト
+  atk: 1
+  hp: 1
+  
