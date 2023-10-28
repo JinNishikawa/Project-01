@@ -83,7 +83,6 @@ namespace Omino.Infra.Master.Tables
                 {
                     new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("Id")),
                     new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("Name")),
-                    new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("ObjectId")),
                     new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("Hp")),
                     new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("Atk")),
                 },

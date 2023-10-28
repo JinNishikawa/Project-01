@@ -83,7 +83,6 @@ namespace Omino.Infra.Master.Tables
                 {
                     new MasterMemory.Meta.MetaProperty(typeof(PartyData).GetProperty("Id")),
                     new MasterMemory.Meta.MetaProperty(typeof(PartyData).GetProperty("Formation")),
-                    new MasterMemory.Meta.MetaProperty(typeof(PartyData).GetProperty("Members")),
                     new MasterMemory.Meta.MetaProperty(typeof(PartyData).GetProperty("MoveSpeed")),
                 },
                 new MasterMemory.Meta.MetaIndex[]{

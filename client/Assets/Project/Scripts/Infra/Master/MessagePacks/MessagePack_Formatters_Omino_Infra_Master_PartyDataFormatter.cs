@@ -22,8 +22,6 @@ namespace MessagePack.Formatters.Omino.Infra.Master
         private static global::System.ReadOnlySpan<byte> GetSpan_Id() => new byte[1 + 2] { 162, 73, 100 };
         // Formation
         private static global::System.ReadOnlySpan<byte> GetSpan_Formation() => new byte[1 + 9] { 169, 70, 111, 114, 109, 97, 116, 105, 111, 110 };
-        // Members
-        private static global::System.ReadOnlySpan<byte> GetSpan_Members() => new byte[1 + 7] { 167, 77, 101, 109, 98, 101, 114, 115 };
         // MoveSpeed
         private static global::System.ReadOnlySpan<byte> GetSpan_MoveSpeed() => new byte[1 + 9] { 169, 77, 111, 118, 101, 83, 112, 101, 101, 100 };
 
@@ -36,13 +34,11 @@ namespace MessagePack.Formatters.Omino.Infra.Master
             }
 
             var formatterResolver = options.Resolver;
-            writer.WriteMapHeader(4);
+            writer.WriteMapHeader(3);
             writer.WriteRaw(GetSpan_Id());
             writer.Write(value.Id);
             writer.WriteRaw(GetSpan_Formation());
-            global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<uint[,]>(formatterResolver).Serialize(ref writer, value.Formation, options);
-            writer.WriteRaw(GetSpan_Members());
-            global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.IEnumerable<uint>>(formatterResolver).Serialize(ref writer, value.Members, options);
+            global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.IEnumerable<uint>>>(formatterResolver).Serialize(ref writer, value.Formation, options);
             writer.WriteRaw(GetSpan_MoveSpeed());
             writer.Write(value.MoveSpeed);
         }
@@ -80,7 +76,7 @@ namespace MessagePack.Formatters.Omino.Infra.Master
                             case 8028075772561485638UL:
                                 if (stringKey[0] != 110) { goto FAIL; }
 
-                                ____result.Formation = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<uint[,]>(formatterResolver).Deserialize(ref reader, options);
+                                ____result.Formation = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.IEnumerable<uint>>>(formatterResolver).Deserialize(ref reader, options);
                                 continue;
 
                             case 7306369473965354829UL:
@@ -90,11 +86,6 @@ namespace MessagePack.Formatters.Omino.Infra.Master
                                 continue;
 
                         }
-                    case 7:
-                        if (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey) != 32495402090325325UL) { goto FAIL; }
-
-                        ____result.Members = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.IEnumerable<uint>>(formatterResolver).Deserialize(ref reader, options);
-                        continue;
 
                 }
             }

@@ -22,8 +22,6 @@ namespace MessagePack.Formatters.Omino.Infra.Master
         private static global::System.ReadOnlySpan<byte> GetSpan_Id() => new byte[1 + 2] { 162, 73, 100 };
         // Name
         private static global::System.ReadOnlySpan<byte> GetSpan_Name() => new byte[1 + 4] { 164, 78, 97, 109, 101 };
-        // ObjectId
-        private static global::System.ReadOnlySpan<byte> GetSpan_ObjectId() => new byte[1 + 8] { 168, 79, 98, 106, 101, 99, 116, 73, 100 };
         // Hp
         private static global::System.ReadOnlySpan<byte> GetSpan_Hp() => new byte[1 + 2] { 162, 72, 112 };
         // Atk
@@ -38,13 +36,11 @@ namespace MessagePack.Formatters.Omino.Infra.Master
             }
 
             var formatterResolver = options.Resolver;
-            writer.WriteMapHeader(5);
+            writer.WriteMapHeader(4);
             writer.WriteRaw(GetSpan_Id());
             writer.Write(value.Id);
             writer.WriteRaw(GetSpan_Name());
             global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<string>(formatterResolver).Serialize(ref writer, value.Name, options);
-            writer.WriteRaw(GetSpan_ObjectId());
-            global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<string>(formatterResolver).Serialize(ref writer, value.ObjectId, options);
             writer.WriteRaw(GetSpan_Hp());
             writer.Write(value.Hp);
             writer.WriteRaw(GetSpan_Atk());
@@ -87,11 +83,6 @@ namespace MessagePack.Formatters.Omino.Infra.Master
                         if (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey) != 1701667150UL) { goto FAIL; }
 
                         ____result.Name = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<string>(formatterResolver).Deserialize(ref reader, options);
-                        continue;
-                    case 8:
-                        if (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey) != 7226435047344726607UL) { goto FAIL; }
-
-                        ____result.ObjectId = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<string>(formatterResolver).Deserialize(ref reader, options);
                         continue;
                     case 3:
                         if (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey) != 7042113UL) { goto FAIL; }

@@ -49,8 +49,8 @@ namespace MessagePack.Resolvers
         {
             lookup = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4)
             {
-                { typeof(global::System.Collections.Generic.IEnumerable<uint>), 0 },
-                { typeof(uint[,]), 1 },
+                { typeof(global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.IEnumerable<uint>>), 0 },
+                { typeof(global::System.Collections.Generic.IEnumerable<uint>), 1 },
                 { typeof(global::Omino.Infra.Master.CharacterData), 2 },
                 { typeof(global::Omino.Infra.Master.PartyData), 3 },
             };
@@ -66,8 +66,8 @@ namespace MessagePack.Resolvers
 
             switch (key)
             {
-                case 0: return new global::MessagePack.Formatters.InterfaceEnumerableFormatter<uint>();
-                case 1: return new global::MessagePack.Formatters.TwoDimensionalArrayFormatter<uint>();
+                case 0: return new global::MessagePack.Formatters.InterfaceEnumerableFormatter<global::System.Collections.Generic.IEnumerable<uint>>();
+                case 1: return new global::MessagePack.Formatters.InterfaceEnumerableFormatter<uint>();
                 case 2: return new MessagePack.Formatters.Omino.Infra.Master.CharacterDataFormatter();
                 case 3: return new MessagePack.Formatters.Omino.Infra.Master.PartyDataFormatter();
                 default: return null;
