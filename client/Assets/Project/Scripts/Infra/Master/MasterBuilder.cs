@@ -1,8 +1,11 @@
+using System.Collections.Generic;
+using System.IO;
 using MessagePack;
 using MessagePack.Resolvers;
-using System.IO;
 using UnityEditor;
 using UnityEngine;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace Omino.Infra.Master
 {
@@ -26,11 +29,13 @@ namespace Omino.Infra.Master
             }
             catch { }
 
-            var dummy = new[]
-            {
-                new CharacterData { Id = 1, Name = "test", ObjectId = "1", Atk = 1, Hp = 1 },
-                new CharacterData { Id = 2, Name = "dummy", ObjectId = "2", Atk = 1, Hp = 1 },
-            };
+            var reader = new StreamReader("Assets/Project/Data/CharacterTable.yaml");
+            var text = reader.ReadToEnd();
+            var deserializer = new DeserializerBuilder()
+                                // .IgnoreUnmatchedProperties()
+                                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                                .Build();
+            var dummy = deserializer.Deserialize<List<CharacterData>>(text);
 
             var builder = new DatabaseBuilder();
             builder.Append(dummy);
