@@ -2,11 +2,11 @@
   formation: [
     [1]
   ]
-  move_speed: 1
+  move_speed: 2.0
 - id: 2
   formation: [
     [1,1,1],
     [1,1,1],
     [1,1,1]
   ]
-  move_speed: 1
+  move_speed: 1.5
