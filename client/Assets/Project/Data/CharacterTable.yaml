@@ -1,7 +1,8 @@
-﻿version: 1.0.0
-character:
-  id: 1
+﻿- id: 1
   name: テスト
   atk: 1
   hp: 1
-  
+- id: 2
+  name: ダミー
+  atk: 1
+  hp: 1

@@ -1,0 +1,18 @@
+version: "2"
+services:
+  client:
+    image: "mcr.microsoft.com/dotnet/sdk:6.0"
+    volumes:
+      - type: bind
+        source: "./client/.config"
+        target: "/app/client/.config"
+      - type: bind
+        source: "./client/client.sln"
+        target: "/app/client/client.sln"
+      - type: bind
+        source: "./client/Assets/Project/Scripts/Infra/Master"
+        target: "/app/client/Assets/Project/Scripts/Infra/Master"
+      - type: bind
+        source: "./tools"
+        target: "/app/tools"
+    tty: true
