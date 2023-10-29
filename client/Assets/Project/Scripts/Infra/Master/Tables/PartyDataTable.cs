@@ -73,8 +73,14 @@ namespace Omino.Infra.Master.Tables
 
         void ITableUniqueValidate.ValidateUnique(ValidateResult resultSet)
         {
+#if !DISABLE_MASTERMEMORY_VALIDATOR
+
             ValidateUniqueCore(data, primaryIndexSelector, "Id", resultSet);       
+
+#endif
         }
+
+#if !DISABLE_MASTERMEMORY_METADATABASE
 
         public static MasterMemory.Meta.MetaTable CreateMetaTable()
         {
@@ -92,5 +98,6 @@ namespace Omino.Infra.Master.Tables
                 });
         }
 
+#endif
     }
 }

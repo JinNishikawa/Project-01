@@ -24,15 +24,41 @@ namespace Omino.Infra.Master
             this.PartyDataTable = PartyDataTable;
         }
 
-        public MemoryDatabase(byte[] databaseBinary, bool internString = true, MessagePack.IFormatterResolver formatterResolver = null)
-            : base(databaseBinary, internString, formatterResolver)
+        public MemoryDatabase(byte[] databaseBinary, bool internString = true, MessagePack.IFormatterResolver formatterResolver = null, int maxDegreeOfParallelism = 1)
+            : base(databaseBinary, internString, formatterResolver, maxDegreeOfParallelism)
         {
         }
 
-        protected override void Init(Dictionary<string, (int offset, int count)> header, System.ReadOnlyMemory<byte> databaseBinary, MessagePack.MessagePackSerializerOptions options)
+        protected override void Init(Dictionary<string, (int offset, int count)> header, System.ReadOnlyMemory<byte> databaseBinary, MessagePack.MessagePackSerializerOptions options, int maxDegreeOfParallelism)
+        {
+            if(maxDegreeOfParallelism == 1)
+            {
+                InitSequential(header, databaseBinary, options, maxDegreeOfParallelism);
+            }
+            else
+            {
+                InitParallel(header, databaseBinary, options, maxDegreeOfParallelism);
+            }
+        }
+
+        void InitSequential(Dictionary<string, (int offset, int count)> header, System.ReadOnlyMemory<byte> databaseBinary, MessagePack.MessagePackSerializerOptions options, int maxDegreeOfParallelism)
         {
             this.CharacterDataTable = ExtractTableData<CharacterData, CharacterDataTable>(header, databaseBinary, options, xs => new CharacterDataTable(xs));
             this.PartyDataTable = ExtractTableData<PartyData, PartyDataTable>(header, databaseBinary, options, xs => new PartyDataTable(xs));
+        }
+
+        void InitParallel(Dictionary<string, (int offset, int count)> header, System.ReadOnlyMemory<byte> databaseBinary, MessagePack.MessagePackSerializerOptions options, int maxDegreeOfParallelism)
+        {
+            var extracts = new Action[]
+            {
+                () => this.CharacterDataTable = ExtractTableData<CharacterData, CharacterDataTable>(header, databaseBinary, options, xs => new CharacterDataTable(xs)),
+                () => this.PartyDataTable = ExtractTableData<PartyData, PartyDataTable>(header, databaseBinary, options, xs => new PartyDataTable(xs)),
+            };
+            
+            System.Threading.Tasks.Parallel.Invoke(new System.Threading.Tasks.ParallelOptions
+            {
+                MaxDegreeOfParallelism = maxDegreeOfParallelism
+            }, extracts);
         }
 
         public ImmutableBuilder ToImmutableBuilder()
@@ -56,6 +82,8 @@ namespace Omino.Infra.Master
             return builder;
         }
 
+#if !DISABLE_MASTERMEMORY_VALIDATOR
+
         public ValidateResult Validate()
         {
             var result = new ValidateResult();
@@ -73,6 +101,8 @@ namespace Omino.Infra.Master
             return result;
         }
 
+#endif
+
         static MasterMemory.Meta.MetaDatabase metaTable;
 
         public static object GetTable(MemoryDatabase db, string tableName)
@@ -89,6 +119,8 @@ namespace Omino.Infra.Master
             }
         }
 
+#if !DISABLE_MASTERMEMORY_METADATABASE
+
         public static MasterMemory.Meta.MetaDatabase GetMetaDatabase()
         {
             if (metaTable != null) return metaTable;
@@ -100,5 +132,7 @@ namespace Omino.Infra.Master
             metaTable = new MasterMemory.Meta.MetaDatabase(dict);
             return metaTable;
         }
+
+#endif
     }
 }
