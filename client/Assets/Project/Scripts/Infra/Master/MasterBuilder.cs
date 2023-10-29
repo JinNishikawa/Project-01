@@ -83,7 +83,7 @@ namespace Omino.Infra.Master
             var text = reader.ReadToEnd();
             var deserializer = new DeserializerBuilder()
                                 .IgnoreUnmatchedProperties()
-                                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                                .WithNamingConvention(UnderscoredNamingConvention.Instance)
                                 .Build();
             return deserializer.Deserialize<List<T>>(text);
         }
