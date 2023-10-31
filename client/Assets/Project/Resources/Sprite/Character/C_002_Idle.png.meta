@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69a3492fb0ac2384cb7f1e5cc39ae236
+guid: f503058ee98e5264aa6fbb1c5c922c9f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -51,7 +51,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,49 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yusya back taiki_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c11593e2408396143b0c7d9a5a7404d6
-      internalID: -190863974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: yusya back taiki_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 373da3e4d62b7bc4a9e3ffd9147be5df
-      internalID: -131622903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: yusya back taiki_2
+      name: C_002_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,20 +125,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5ec9ec2987963a4780daa12c63383df
-      internalID: -20545111
+      spriteID: 81379c1ace0ce364dbe5aef761c5f0e1
+      internalID: -432873037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya back taiki_3
+      name: C_002_Idle_1
       rect:
         serializedVersion: 2
         x: 0
@@ -188,20 +146,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24c921f7a8d0e594f94842fee713b754
-      internalID: -1612233411
+      spriteID: 858e6f4a7ea151b47a310428de617284
+      internalID: 1420585289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya back taiki_4
+      name: C_002_Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -209,20 +167,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdf18a0e1bccf814d8806956a919050d
-      internalID: 58354942
+      spriteID: fd403755245f2e14db97cbc82fc3d198
+      internalID: -949510894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya back taiki_5
+      name: C_002_Idle_3
       rect:
         serializedVersion: 2
         x: 0
@@ -230,14 +188,14 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12e46c0f26e61747ba0e669cf7977e1
-      internalID: -2014122298
+      spriteID: 5002e764f4af2db439405d97fccf803d
+      internalID: -1321295826
       vertices: []
       indices: 
       edges: []
@@ -245,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ec7bdcb24e5420d428e135f6115e0f75
+    spriteID: 9caf0e0fdf0a68b48a1b43e34807a6d3
     internalID: 0
     vertices: []
     indices: 
@@ -253,12 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      yusya back taiki_0: -190863974
-      yusya back taiki_1: -131622903
-      yusya back taiki_2: -20545111
-      yusya back taiki_3: -1612233411
-      yusya back taiki_4: 58354942
-      yusya back taiki_5: -2014122298
+      C_002_Idle_0: -432873037
+      C_002_Idle_1: 1420585289
+      C_002_Idle_2: -949510894
+      C_002_Idle_3: -1321295826
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

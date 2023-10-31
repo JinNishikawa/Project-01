@@ -17,7 +17,7 @@ namespace Omino.Infra.Master
     internal static class MasterBuilder
     {
         private const string TABLE_PATH = "Assets/Project/Data";
-        private const string OUTPUT_PATH = "Assets/StreamingAssets/MasterTable";
+        private const string OUTPUT_PATH = "Assets/Project/Resources/MasterTable";
 
         [MenuItem("Tools/MasterBuild")]
         public static void Build()

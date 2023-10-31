@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f1011e2fd9d3cb4eb206b14b3db0aa0
+guid: 244cbd0d8897acb4b92aa19d31d197f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,7 +117,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yusya back aruku_0
+      name: C_001_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5e767523c051b498978bfdbf036878
+      internalID: 291917312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C_001_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34957454bf347a4d93da1ab47de52e0
+      internalID: 24806138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C_001_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c34062b7d503c24e81a5915573a5c26
+      internalID: 1079915283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C_001_Attack_3
       rect:
         serializedVersion: 2
         x: 0
@@ -125,20 +188,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5500209de07e5f41829bfc35d977cb0
-      internalID: 824902682
+      spriteID: 487a1e126c8c31e4a94ab14b4b1be982
+      internalID: 1087821476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya back aruku_1
+      name: C_001_Attack_4
       rect:
         serializedVersion: 2
         x: 0
@@ -146,20 +209,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9fe6a0d77041c644afd9dbe715e2fe0
-      internalID: 1211937533
+      spriteID: fe6efd181e451134394d94628fbe97bb
+      internalID: -258025907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya back aruku_2
+      name: C_001_Attack_5
       rect:
         serializedVersion: 2
         x: 0
@@ -167,20 +230,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9a5fdc6c70bf0e43bdf280d5524d640
-      internalID: -184585313
+      spriteID: 2c7a52cc82bc3964e8ecad116d8adf17
+      internalID: 411885602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya back aruku_3
+      name: C_001_Attack_6
       rect:
         serializedVersion: 2
         x: 0
@@ -188,14 +251,14 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7187171f0f7d9164a810ea92d5ff0822
-      internalID: 2020945996
+      spriteID: 80002016001f71a4d8e8e64a474bbed6
+      internalID: 1281597941
       vertices: []
       indices: 
       edges: []
@@ -203,7 +266,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 03dedb3fdcf512b41a55497fec9539a1
+    spriteID: 32662b6bd9189754b9f9ea50dde3f64d
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      yusya back aruku_0: 824902682
-      yusya back aruku_1: 1211937533
-      yusya back aruku_2: -184585313
-      yusya back aruku_3: 2020945996
+      C_001_Attack_0: 291917312
+      C_001_Attack_1: 24806138
+      C_001_Attack_2: 1079915283
+      C_001_Attack_3: 1087821476
+      C_001_Attack_4: -258025907
+      C_001_Attack_5: 411885602
+      C_001_Attack_6: 1281597941
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heisi aruku_0
+      name: C_002_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e270038b96badfc49b40535b37927fa6
-      internalID: -930639631
+      spriteID: 707d4eece4517554c98da42aef22bc68
+      internalID: 1824444247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heisi aruku_1
+      name: C_002_Walk_1
       rect:
         serializedVersion: 2
         x: 0
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c17c740f3a5fa242b15adc463127dd4
-      internalID: 1375008751
+      spriteID: ab85d29fe4904a24ba917432ff2a65a5
+      internalID: -818287868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heisi aruku_2
+      name: C_002_Walk_2
       rect:
         serializedVersion: 2
         x: 0
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51eedcdb875b3474895fda951fa13156
-      internalID: -2118466536
+      spriteID: b9f55bfb783074d459748f315ba7e413
+      internalID: -918018884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heisi aruku_3
+      name: C_002_Walk_3
       rect:
         serializedVersion: 2
         x: 0
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3c7862ffb89205409353b0ab7c90025
-      internalID: 657879581
+      spriteID: 2c2bef457b40fdb4dbd214007c5574be
+      internalID: -705574685
       vertices: []
       indices: 
       edges: []
@@ -211,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      heisi aruku_0: -930639631
-      heisi aruku_1: 1375008751
-      heisi aruku_2: -2118466536
-      heisi aruku_3: 657879581
+      C_002_Walk_0: 1824444247
+      C_002_Walk_1: -818287868
+      C_002_Walk_2: -918018884
+      C_002_Walk_3: -705574685
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

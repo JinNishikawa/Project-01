@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 244cbd0d8897acb4b92aa19d31d197f3
+guid: 7f1011e2fd9d3cb4eb206b14b3db0aa0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,70 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yusya attack_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 768
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aeb3fa045be23f940bdd467b746859b3
-      internalID: -1150427304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: yusya attack_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44f6a1d90f95b664486ff65799f39bce
-      internalID: 1111131881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: yusya attack_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99a100dfee047bd428a667453e8229ac
-      internalID: -1517256022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: yusya attack_3
+      name: C_001_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab1dc07febe75a74b837081e88714894
-      internalID: 439503587
+      spriteID: 7f230061816978a46ad5ba01e4a8453d
+      internalID: -629848237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya attack_4
+      name: C_001_Walk_1
       rect:
         serializedVersion: 2
         x: 0
@@ -215,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32fa5a20dc5bf7140a0b23cd146aecf1
-      internalID: -1742695557
+      spriteID: e025bb1438072c64593a827d96cdbe6b
+      internalID: -387571651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya attack_5
+      name: C_001_Walk_2
       rect:
         serializedVersion: 2
         x: 0
@@ -236,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 854b0d8f124abc842bdce2017b30af24
-      internalID: 1965739388
+      spriteID: c18eaba68cca2b7429d90b00e9abe076
+      internalID: 1163539856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yusya attack_6
+      name: C_001_Walk_3
       rect:
         serializedVersion: 2
         x: 0
@@ -257,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c08c8bc72cf60544e876d4bd1c5e7b2e
-      internalID: -1596664471
+      spriteID: 14896153044bf964da26578a65a1a256
+      internalID: -1364386718
       vertices: []
       indices: 
       edges: []
@@ -266,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 32662b6bd9189754b9f9ea50dde3f64d
+    spriteID: 03dedb3fdcf512b41a55497fec9539a1
     internalID: 0
     vertices: []
     indices: 
@@ -274,13 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      yusya attack_0: -1150427304
-      yusya attack_1: 1111131881
-      yusya attack_2: -1517256022
-      yusya attack_3: 439503587
-      yusya attack_4: -1742695557
-      yusya attack_5: 1965739388
-      yusya attack_6: -1596664471
+      C_001_Walk_0: -629848237
+      C_001_Walk_1: -387571651
+      C_001_Walk_2: 1163539856
+      C_001_Walk_3: -1364386718
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
