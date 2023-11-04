@@ -1,35 +1,30 @@
 using DG.Tweening;
 using UnityEngine;
+using Omino.Infra.Master;
+using System.Linq;
+using Cysharp.Threading.Tasks;
 
-public class Party : MonoBehaviour
+public class Party : MonoBehaviour, IFactoryObject<PartyData>
 {
-    [SerializeField]
-    private Character _character;
+    private PartyData _party;
 
-    private uint[,] _formation;
-
-    private void Awake()
+    public async UniTask Setup(PartyData data)
     {
-        _formation = new uint[2,2]
-        {
-            {1,1},
-            {1,1},
-        };
+        if(data == null)
+            return;
 
-
-        for(var i = 0; i < _formation.GetLength(0); i++)
+        _party = data;
+        var center = new Vector2(
+            _party.Formation.First().CenterIndex(),
+            _party.Formation.CenterIndex());
+        foreach (var column in _party.Formation)
         {
-            for(var j = 0; j < _formation.GetLength(1); j++)
+            foreach(var id in column)
             {
-                var pos = new Vector3(j * 0.5f, 0, i * 0.5f);
-                GameObject.Instantiate(_character, pos, Quaternion.identity, this.transform);
+                // var pos = new Vector3(j * 0.5f, 0, i * 0.5f);
+                // GameObject.Instantiate(_character, pos, Quaternion.identity, this.transform);
             }
         }
-    }
-
-    private void Start()
-    {
-        Move();
     }
 
     public void Move()

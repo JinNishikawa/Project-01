@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.U2D;
 
-public class Character : MonoBehaviour, IAsyncFactoryObject<CharacterData>
+public class Character : MonoBehaviour, IFactoryObject<CharacterData>
 {
     [SerializeField]
     private SpriteRenderer _front;
@@ -20,7 +20,7 @@ public class Character : MonoBehaviour, IAsyncFactoryObject<CharacterData>
     private string FrontSpriteName { get { return string.Format("C_{0:d3}_Front", _character?.Id ?? 1); } }
     private string BackSpriteName { get { return string.Format("C_{0:d3}_Idle_0", _character?.Id ?? 1); } }
 
-    public async UniTaskVoid Setup(CharacterData data)
+    public async UniTask Setup(CharacterData data)
     {
         if (data == null)
             return;
