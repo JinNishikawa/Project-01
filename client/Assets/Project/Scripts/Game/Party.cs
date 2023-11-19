@@ -62,6 +62,7 @@ public class Party : MonoBehaviour, IFactoryObject<PartyData>
     public void Move()
     {
         this.transform.DOMoveX(CellSize, 1f)
-            .SetLoops(-1, LoopType.Incremental);
+            .SetLoops(-1, LoopType.Incremental)
+            .SetDelay(_party.MoveSpeed);
     }
 }
