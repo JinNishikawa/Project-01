@@ -18,7 +18,6 @@ public class PartyFactory : IFactory<Party, PartyData>
     {
         if(_table.TryFindById(id, out PartyData data))
         {
-            Debug.LogError(data);
             var prefab = await Resources.LoadAsync<GameObject>("Prefab/Battle/Party") as GameObject;
             var obj = GameObject.Instantiate(prefab);
             var party = obj.GetComponent<Party>();

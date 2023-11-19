@@ -3,10 +3,21 @@ using UnityEngine;
 using Omino.Infra.Master;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using VContainer;
 
 public class Party : MonoBehaviour, IFactoryObject<PartyData>
 {
+    [SerializeField]
+    private Transform _charactersRoot = null;
+
     private PartyData _party;
+    private CharacterFactory _charaFactory;
+
+    [Inject]
+    public void Inject(CharacterFactory factory)
+    {
+        _charaFactory = factory;
+    }
 
     public async UniTask Setup(PartyData data)
     {
@@ -14,15 +25,13 @@ public class Party : MonoBehaviour, IFactoryObject<PartyData>
             return;
 
         _party = data;
-        var center = new Vector2(
-            _party.Formation.First().CenterIndex(),
-            _party.Formation.CenterIndex());
+
         foreach (var column in _party.Formation)
         {
             foreach(var id in column)
             {
-                // var pos = new Vector3(j * 0.5f, 0, i * 0.5f);
-                // GameObject.Instantiate(_character, pos, Quaternion.identity, this.transform);
+                var character = await _charaFactory.Create(id);
+                character?.transform.SetParent(_charactersRoot);
             }
         }
     }

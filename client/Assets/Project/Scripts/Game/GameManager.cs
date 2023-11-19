@@ -26,8 +26,9 @@ public class GameManager : LifetimeScope
     {
         var database = new MemoryDatabase(_masterTable.bytes);
 
-        builder.RegisterInstance(database);
+        builder.RegisterInstance<MemoryDatabase>(database);
         builder.Register<PartyFactory>(Lifetime.Singleton);
+        builder.Register<CharacterFactory>(Lifetime.Singleton);
         builder.RegisterEntryPoint<TestManager>(Lifetime.Singleton);
     }
 }

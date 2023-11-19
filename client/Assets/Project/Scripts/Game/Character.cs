@@ -15,8 +15,7 @@ public class Character : MonoBehaviour, IFactoryObject<CharacterData>
     private CharacterData _character;
 
     // TODO:　設定用のクラスまたはマスターテーブルに移行させる
-    private string FrontSpriteResourcesPath { get { return string.Format("Sprite/Character/C_{0:d3}_Front", _character?.Id ?? 1); } }
-    private string BackSpriteResourcesPath { get { return string.Format("Sprite/Character/C_{0:d3}_Idle", _character?.Id ?? 1); } }
+    private string AtlasPath { get { return string.Format("Sprite/Character/C_{0:d3}", _character?.Id ?? 1); } }
     private string FrontSpriteName { get { return string.Format("C_{0:d3}_Front", _character?.Id ?? 1); } }
     private string BackSpriteName { get { return string.Format("C_{0:d3}_Idle_0", _character?.Id ?? 1); } }
 
@@ -26,13 +25,13 @@ public class Character : MonoBehaviour, IFactoryObject<CharacterData>
             return;
 
         _character = data;
-        _front.sprite = await LoadCharacterSprite(FrontSpriteResourcesPath, FrontSpriteName);
-        _back.sprite = await LoadCharacterSprite(BackSpriteResourcesPath, BackSpriteName);
+        _front!.sprite = await LoadCharacterSprite(FrontSpriteName);
+        _back!.sprite = await LoadCharacterSprite(BackSpriteName);
     }
 
-    private async UniTask<Sprite> LoadCharacterSprite(string path, string spriteName)
+    private async UniTask<Sprite> LoadCharacterSprite(string spriteName)
     {
-        var atlas = await Resources.LoadAsync<SpriteAtlas>(path) as SpriteAtlas;
+        var atlas = await Resources.LoadAsync<SpriteAtlas>(AtlasPath) as SpriteAtlas;
         return atlas?.GetSprite(spriteName);
     }
 }
