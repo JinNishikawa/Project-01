@@ -13,6 +13,8 @@ public class Party : MonoBehaviour, IFactoryObject<PartyData>
     private PartyData _party;
     private CharacterFactory _charaFactory;
 
+    private readonly float CellSize = 1.0f;
+
     [Inject]
     public void Inject(CharacterFactory factory)
     {
@@ -26,19 +28,40 @@ public class Party : MonoBehaviour, IFactoryObject<PartyData>
 
         _party = data;
 
-        foreach (var column in _party.Formation)
+        var center = new Vector3()
         {
-            foreach(var id in column)
+            x = (float)_party.Formation.CenterIndex() / 2.0f + CellSize,
+            y = 0,
+            z = (float)_party.Formation.FirstOrDefault().CenterIndex() / 2.0f + CellSize,
+        };
+        _charactersRoot.transform.position = center;
+
+        for (var i = 0; i < _party.Formation.Count(); i++)
+        {
+            var row = _party.Formation.ElementAtOrDefault(i);
+            for(var j = 0; j < row.Count(); j++)
             {
+                var id = row.ElementAtOrDefault(j);
                 var character = await _charaFactory.Create(id);
-                character?.transform.SetParent(_charactersRoot);
+                var pos = new Vector3()
+                {
+                    x = j * CellSize,
+                    y = 0,
+                    z = i * CellSize,
+                };
+
+                if(character == null)
+                    continue;
+
+                character.transform.SetParent(_charactersRoot);
+                character.transform.position = pos;
             }
         }
     }
 
     public void Move()
     {
-        this.transform.DOMoveX(0.5f, 1f)
+        this.transform.DOMoveX(CellSize, 1f)
             .SetLoops(-1, LoopType.Incremental);
     }
 }
