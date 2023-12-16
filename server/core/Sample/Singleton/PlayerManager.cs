@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using Cysharp.Threading;
 using Core.Sample.StreamingHub;
+using UnityEngine;
 
 namespace Core.Sample.Singleton
 {
@@ -18,10 +19,10 @@ namespace Core.Sample.Singleton
             _looperPool = looperPool ?? throw new ArgumentNullException(nameof(looperPool));
         }
 
-        public (int, Vector3Dto) CreateNewPlayer(PlayerHub hub)
+        public (int, Vector3) CreateNewPlayer(PlayerHub hub)
         {
             _incrementId++;
-            var player = new Player(_incrementId, new Vector3Dto(0, 0, 0));
+            var player = new Player(_incrementId, new Vector3(0, 0, 0));
             _players.Add(player);
             _logger.LogDebug($"{_incrementId}が作成されました");
 
@@ -33,12 +34,12 @@ namespace Core.Sample.Singleton
             return _players;
         }
 
-        public Vector3Dto UpdatePosition(int id, Vector3Dto direction)
+        public Vector3 UpdatePosition(int id, Vector3 direction)
         {
             var player = _players.FirstOrDefault(p => p.Id == id);
-            if (player == null) return new Vector3Dto(0, 0, 0);
+            if (player == null) return new Vector3(0, 0, 0);
 
-            player.Position += direction;
+            player.Position = direction;
             return player.Position;
         }
 

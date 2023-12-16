@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.Design.Serialization;
-using System.Numerics;
+using UnityEngine;
 
 namespace Core.Sample
 {
@@ -22,7 +22,7 @@ namespace Core.Sample
 
         public void MoveForward()
         {
-             Position += new Vector3(0, 0, 1);
+             Position.z += 1;
              LifeTime -= 1;
         }
     }

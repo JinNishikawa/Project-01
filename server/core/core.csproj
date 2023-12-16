@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="LogicLooper" Version="1.4.0" />
     <PackageReference Include="MagicOnion.Server" Version="5.1.8" />
+    <PackageReference Include="MessagePack.UnityShims" Version="2.5.140" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
   </ItemGroup>
 

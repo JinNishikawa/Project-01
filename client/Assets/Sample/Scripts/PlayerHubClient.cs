@@ -36,14 +36,14 @@ public class PlayerHubClient: MonoBehaviour, IPlayerHubReceiver
         {
             var mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 26);
             var currentPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            _playerHubClient.SummonPawn(10, Vector3Dto.FromUnityVector(currentPosition));
+            _playerHubClient.SummonPawn(10, currentPosition);
         }
     }
 
-    public void OnPlayerJoined(int id, Vector3Dto position)
+    public void OnPlayerJoined(int id, Vector3 position)
     {
         AddPlayer(id);
-        _players[id].transform.position = position.ToUnityVector();
+        _players[id].transform.position = position;
     }
 
     public void OnPlayerLeaved(int id)
@@ -52,16 +52,16 @@ public class PlayerHubClient: MonoBehaviour, IPlayerHubReceiver
         _players.Remove(id);
     }
 
-    public void OnPlayerMoved(int id, Vector3Dto position)
+    public void OnPlayerMoved(int id, Vector3 position)
     {
         if (!_initialized) return;
-        _players[id].transform.position = position.ToUnityVector();
+        _players[id].transform.position = position;
     }
 
-    public void OnPawnMoved(int ownerId, int pawnId, Vector3Dto position)
+    public void OnPawnMoved(int ownerId, int pawnId, Vector3 position)
     {
         if(!_pawns[ownerId].ContainsKey(pawnId)) return;
-        _pawns[ownerId][pawnId].transform.position = position.ToUnityVector();
+        _pawns[ownerId][pawnId].transform.position = position;
     }
 
     public void OnPawnDied(int ownerId, int pawnId)
@@ -80,14 +80,14 @@ public class PlayerHubClient: MonoBehaviour, IPlayerHubReceiver
         }
     }
 
-    public void OnSummonedPawn(int ownerId, int pawnId, int typeId, Vector3Dto position)
+    public void OnSummonedPawn(int ownerId, int pawnId, int typeId, Vector3 position)
     {
         // TODO：typeIdを元に生成するキャラクターを変える
         if (!_pawns.ContainsKey(ownerId))
         {
             _pawns[ownerId] = new Dictionary<int, GameObject>();
         }
-        _pawns[ownerId][pawnId] = Instantiate(_pawnPrefab, position.ToUnityVector(), Quaternion.identity);
+        _pawns[ownerId][pawnId] = Instantiate(_pawnPrefab, position, Quaternion.identity);
     }
 
     public void AddPlayer(int id)

@@ -1,6 +1,6 @@
 ﻿using Core.Sample.StreamingHub;
 using System.Collections.Concurrent;
-using System.Numerics;
+using UnityEngine;
 
 namespace Core.Sample.Singleton
 {
