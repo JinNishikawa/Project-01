@@ -19,7 +19,7 @@ public class PlayerHubClient: MonoBehaviour, IPlayerHubReceiver
     [SerializeField] private GameObject _pawnPrefab;
     private async void Start()
     {
-        var httpHandler = new YetAnotherHttpHandler() { SkipCertificateVerification = true };
+        var httpHandler = new YetAnotherHttpHandler() { SkipCertificateVerification = true, Http2Only = true };
         var channel = GrpcChannel.ForAddress(Address, new GrpcChannelOptions() { HttpHandler = httpHandler });
 
         _playerHubClient = await StreamingHubClient.ConnectAsync<IPlayerHub, IPlayerHubReceiver>(channel, this);

@@ -15,8 +15,4 @@
     <Compile Include="..\..\client\Assets\Sample\Scripts\Server\Shared\**\*.cs" Link="LinkFromUnity/%(RecursiveDir)/%(FileName)%(Extension)" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="..\..\client\Assets\Sample\Scripts\Server\Shared\MessagePack\Pawn.cs" />
-  </ItemGroup>
-
 </Project>
