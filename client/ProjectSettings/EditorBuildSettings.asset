@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Game/Title.unity
+  - enabled: 0
+    path: Assets/Project/Scenes/Title.unity
     guid: ca7e19db1d9febd418c832c3a2c0a6cd
-  - enabled: 1
-    path: Assets/Scenes/Game/SelectEnemy.unity
+  - enabled: 0
+    path: Assets/Project/Scenes/SelectEnemy.unity
     guid: 81756fedf67b89941b43c6f1715a87f1
-  - enabled: 1
-    path: Assets/Scenes/Game/Game.unity
+  - enabled: 0
+    path: Assets/Project/Scenes/Game.unity
     guid: 80187e91674dc9340ab0ee7467f9a50e
-  - enabled: 1
-    path: Assets/Scenes/Game/DeckEditor.unity
+  - enabled: 0
+    path: Assets/Project/Scenes/DeckEditor.unity
     guid: d4802df4455e50442a3243e69a71fa94
+  - enabled: 1
+    path: Assets/Sample/MagicOnionSample.unity
+    guid: 97752aa38413d4f45a8c5e02d7d7f087
   m_configObjects: {}

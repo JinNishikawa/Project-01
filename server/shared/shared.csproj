@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MagicOnion.Shared" Version="5.1.8" />
+    <PackageReference Include="MessagePack.UnityShims" Version="2.5.129" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\client\Assets\Sample\Scripts\Server\Shared\**\*.cs" Link="LinkFromUnity/%(RecursiveDir)/%(FileName)%(Extension)" />
+  </ItemGroup>
+
+</Project>

@@ -16,3 +16,12 @@ services:
         source: "./tools"
         target: "/app/tools"
     tty: true
+  server:
+    build:
+      context: .
+      dockerfile: server/core/Dockerfile
+    ports:
+      - "5019:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
