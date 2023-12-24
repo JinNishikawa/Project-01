@@ -81,6 +81,10 @@ namespace MagicOnion
                 {
                     factory = ((global::MagicOnion.Client.StreamingHubClientFactoryDelegate<global::Shared.Sample.IPlayerHub, global::Shared.Sample.IPlayerHubReceiver>)((a, _, b, c, d, e) => new Shared.Sample.PlayerHubClient(a, b, c, d, e)));
                 }
+                if (typeof(TStreamingHub) == typeof(global::Shared.StreamingHub.IPartyHub) && typeof(TReceiver) == typeof(global::Shared.StreamingHub.IPartyHubReceiver))
+                {
+                    factory = ((global::MagicOnion.Client.StreamingHubClientFactoryDelegate<global::Shared.StreamingHub.IPartyHub, global::Shared.StreamingHub.IPartyHubReceiver>)((a, _, b, c, d, e) => new Shared.StreamingHub.PartyHubClient(a, b, c, d, e)));
+                }
 
                 Factory = (global::MagicOnion.Client.StreamingHubClientFactoryDelegate<TStreamingHub, TReceiver>)factory;
             }
@@ -141,13 +145,14 @@ namespace MagicOnion.Resolvers
     
         static MagicOnionResolverGetFormatterHelper()
         {
-            lookup = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5)
+            lookup = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6)
             {
                 {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>), 0 },
-                {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>), 1 },
-                {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32>), 2 },
-                {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::UnityEngine.Vector3>), 3 },
-                {typeof(global::Shared.Sample.MessagePack.Player[]), 4 },
+                {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3, global::UnityEngine.Vector3>), 1 },
+                {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>), 2 },
+                {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32>), 3 },
+                {typeof(global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::UnityEngine.Vector3>), 4 },
+                {typeof(global::Shared.Sample.MessagePack.Player[]), 5 },
             };
         }
         internal static object GetFormatter(Type t)
@@ -161,10 +166,11 @@ namespace MagicOnion.Resolvers
             switch (key)
             {
                 case 0: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>(default(global::System.Int32), default(global::System.Int32), default(global::System.Int32), default(global::UnityEngine.Vector3));
-                case 1: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>(default(global::System.Int32), default(global::System.Int32), default(global::UnityEngine.Vector3));
-                case 2: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::System.Int32>(default(global::System.Int32), default(global::System.Int32));
-                case 3: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::UnityEngine.Vector3>(default(global::System.Int32), default(global::UnityEngine.Vector3));
-                case 4: return new global::MessagePack.Formatters.ArrayFormatter<global::Shared.Sample.MessagePack.Player>();
+                case 1: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3, global::UnityEngine.Vector3>(default(global::System.Int32), default(global::System.Int32), default(global::UnityEngine.Vector3), default(global::UnityEngine.Vector3));
+                case 2: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>(default(global::System.Int32), default(global::System.Int32), default(global::UnityEngine.Vector3));
+                case 3: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::System.Int32>(default(global::System.Int32), default(global::System.Int32));
+                case 4: return new global::MagicOnion.DynamicArgumentTupleFormatter<global::System.Int32, global::UnityEngine.Vector3>(default(global::System.Int32), default(global::UnityEngine.Vector3));
+                case 5: return new global::MessagePack.Formatters.ArrayFormatter<global::Shared.Sample.MessagePack.Player>();
                 default: return null;
             }
         }
@@ -177,6 +183,7 @@ namespace MagicOnion.Resolvers
         internal static void Register()
         {
             _ = MagicOnionResolver.Instance.GetFormatter<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>>();
+            _ = MagicOnionResolver.Instance.GetFormatter<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3, global::UnityEngine.Vector3>>();
             _ = MagicOnionResolver.Instance.GetFormatter<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>>();
             _ = MagicOnionResolver.Instance.GetFormatter<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32>>();
             _ = MagicOnionResolver.Instance.GetFormatter<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::UnityEngine.Vector3>>();
@@ -331,6 +338,81 @@ namespace Shared.Sample
                     base.SetResultForResponse<global::MessagePack.Nil>(taskCompletionSource, data);
                     break;
                 case 441487168: // ValueTask SummonPawn(global::System.Int32 typeId, global::UnityEngine.Vector3 position)
+                    base.SetResultForResponse<global::MessagePack.Nil>(taskCompletionSource, data);
+                    break;
+            }
+        }
+        
+    }
+}
+
+namespace Shared.StreamingHub
+{
+    using global::System;
+    using global::Grpc.Core;
+    using global::MagicOnion;
+    using global::MagicOnion.Client;
+    using global::MessagePack;
+    
+    [global::MagicOnion.Ignore]
+    public class PartyHubClient : global::MagicOnion.Client.StreamingHubClientBase<global::Shared.StreamingHub.IPartyHub, global::Shared.StreamingHub.IPartyHubReceiver>, global::Shared.StreamingHub.IPartyHub
+    {
+        protected override global::Grpc.Core.Method<global::System.Byte[], global::System.Byte[]> DuplexStreamingAsyncMethod { get; }
+        
+        public PartyHubClient(global::Grpc.Core.CallInvoker callInvoker, global::System.String host, global::Grpc.Core.CallOptions options, global::MagicOnion.Serialization.IMagicOnionSerializerProvider serializerProvider, global::MagicOnion.Client.IMagicOnionClientLogger logger)
+            : base(callInvoker, host, options, serializerProvider, logger)
+        {
+            var marshaller = global::MagicOnion.MagicOnionMarshallers.ThroughMarshaller;
+            DuplexStreamingAsyncMethod = new global::Grpc.Core.Method<global::System.Byte[], global::System.Byte[]>(global::Grpc.Core.MethodType.DuplexStreaming, "IPartyHub", "Connect", marshaller, marshaller);
+        }
+        
+        public global::System.Threading.Tasks.ValueTask PlaceParty(global::System.Int32 partyId, global::UnityEngine.Vector3 position)
+            => new global::System.Threading.Tasks.ValueTask(base.WriteMessageWithResponseAsync<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::UnityEngine.Vector3>, global::MessagePack.Nil>(355256032, new global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::UnityEngine.Vector3>(partyId, position)));
+        
+        public global::Shared.StreamingHub.IPartyHub FireAndForget()
+            => new FireAndForgetClient(this);
+        
+        [global::MagicOnion.Ignore]
+        class FireAndForgetClient : global::Shared.StreamingHub.IPartyHub
+        {
+            readonly PartyHubClient parent;
+        
+            public FireAndForgetClient(PartyHubClient parent)
+                => this.parent = parent;
+        
+            public global::Shared.StreamingHub.IPartyHub FireAndForget() => this;
+            public global::System.Threading.Tasks.Task DisposeAsync() => throw new global::System.NotSupportedException();
+            public global::System.Threading.Tasks.Task WaitForDisconnect() => throw new global::System.NotSupportedException();
+        
+            public global::System.Threading.Tasks.ValueTask PlaceParty(global::System.Int32 partyId, global::UnityEngine.Vector3 position)
+                => new global::System.Threading.Tasks.ValueTask(parent.WriteMessageFireAndForgetAsync<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::UnityEngine.Vector3>, global::MessagePack.Nil>(355256032, new global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::UnityEngine.Vector3>(partyId, position)));
+            
+        }
+        
+        protected override void OnBroadcastEvent(global::System.Int32 methodId, global::System.ArraySegment<global::System.Byte> data)
+        {
+            switch (methodId)
+            {
+                case -1001670836: // Void PlacedParty(global::System.Int32 ownerId, global::System.Int32 partyId, global::System.Int32 uniqueId, global::UnityEngine.Vector3 position)
+                    {
+                        var value = base.Deserialize<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::System.Int32, global::UnityEngine.Vector3>>(data);
+                        receiver.PlacedParty(value.Item1, value.Item2, value.Item3, value.Item4);
+                    }
+                    break;
+                case 1612883572: // Void MovedParty(global::System.Int32 ownerId, global::System.Int32 uniqueId, global::UnityEngine.Vector3 prev, global::UnityEngine.Vector3 current)
+                    {
+                        var value = base.Deserialize<global::MagicOnion.DynamicArgumentTuple<global::System.Int32, global::System.Int32, global::UnityEngine.Vector3, global::UnityEngine.Vector3>>(data);
+                        receiver.MovedParty(value.Item1, value.Item2, value.Item3, value.Item4);
+                    }
+                    break;
+            }
+        }
+        
+        protected override void OnResponseEvent(global::System.Int32 methodId, global::System.Object taskCompletionSource, global::System.ArraySegment<global::System.Byte> data)
+        {
+            switch (methodId)
+            {
+                case 355256032: // ValueTask PlaceParty(global::System.Int32 partyId, global::UnityEngine.Vector3 position)
                     base.SetResultForResponse<global::MessagePack.Nil>(taskCompletionSource, data);
                     break;
             }
