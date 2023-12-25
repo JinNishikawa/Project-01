@@ -2,7 +2,7 @@ using MagicOnion;
 using UnityEngine;
 using System.Threading.Tasks;
 
-namespace Shared.StreamingHub
+namespace Omino.Infra.StreamingHub
 {
     public interface IPartyHub : IStreamingHub<IPartyHub, IPartyHubReceiver>
     {

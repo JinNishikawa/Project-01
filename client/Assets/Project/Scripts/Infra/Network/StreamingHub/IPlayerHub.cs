@@ -3,7 +3,7 @@ using UnityEngine;
 using Shared.Sample.MessagePack;
 using System.Threading.Tasks;
 
-namespace Shared.StreamingHub
+namespace Omino.Infra.StreamingHub
 { 
     public interface IPlayerHub : IStreamingHub<IPlayerHub, IPlayerHubReceiver>
     {
