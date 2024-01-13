@@ -1,6 +1,5 @@
 using MagicOnion;
 using UnityEngine;
-using Shared.Sample.MessagePack;
 using System.Threading.Tasks;
 
 namespace Omino.Infra.StreamingHub
