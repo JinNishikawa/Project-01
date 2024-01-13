@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\client\Assets\Project\Scripts\Infra\Network\**\*.cs" Link="LinkFromUnity/%(RecursiveDir)/%(FileName)%(Extension)" />
+    <Compile Include="..\..\client\Assets\Project\Scripts\Infra\Network\StreamingHub\*.cs" Link="StreamingHubInterface/%(RecursiveDir)/%(FileName)%(Extension)" />
+    <Compile Include="..\..\client\Assets\Sample\Scripts\Server\Shared\**\*.cs" Link="SharedSample/%(RecursiveDir)/%(FileName)%(Extension)" />
   </ItemGroup>
 
 </Project>
