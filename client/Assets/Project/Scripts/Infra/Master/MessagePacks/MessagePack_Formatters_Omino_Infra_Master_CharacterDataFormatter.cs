@@ -26,6 +26,8 @@ namespace MessagePack.Formatters.Omino.Infra.Master
         private static global::System.ReadOnlySpan<byte> GetSpan_Hp() => new byte[1 + 2] { 162, 72, 112 };
         // Atk
         private static global::System.ReadOnlySpan<byte> GetSpan_Atk() => new byte[1 + 3] { 163, 65, 116, 107 };
+        // MoveSpeed
+        private static global::System.ReadOnlySpan<byte> GetSpan_MoveSpeed() => new byte[1 + 9] { 169, 77, 111, 118, 101, 83, 112, 101, 101, 100 };
 
         public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::Omino.Infra.Master.CharacterData value, global::MessagePack.MessagePackSerializerOptions options)
         {
@@ -36,7 +38,7 @@ namespace MessagePack.Formatters.Omino.Infra.Master
             }
 
             var formatterResolver = options.Resolver;
-            writer.WriteMapHeader(4);
+            writer.WriteMapHeader(5);
             writer.WriteRaw(GetSpan_Id());
             writer.Write(value.Id);
             writer.WriteRaw(GetSpan_Name());
@@ -45,6 +47,8 @@ namespace MessagePack.Formatters.Omino.Infra.Master
             writer.Write(value.Hp);
             writer.WriteRaw(GetSpan_Atk());
             writer.Write(value.Atk);
+            writer.WriteRaw(GetSpan_MoveSpeed());
+            writer.Write(value.MoveSpeed);
         }
 
         public global::Omino.Infra.Master.CharacterData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
@@ -88,6 +92,11 @@ namespace MessagePack.Formatters.Omino.Infra.Master
                         if (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey) != 7042113UL) { goto FAIL; }
 
                         ____result.Atk = reader.ReadUInt32();
+                        continue;
+                    case 9:
+                        if (!global::System.MemoryExtensions.SequenceEqual(stringKey, GetSpan_MoveSpeed().Slice(1))) { goto FAIL; }
+
+                        ____result.MoveSpeed = reader.ReadSingle();
                         continue;
 
                 }

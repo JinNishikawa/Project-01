@@ -11,5 +11,6 @@ namespace Omino.Infra.Master
         public string Name { get; set; }
         public uint Hp { get; set; }
         public uint Atk { get; set; }
+        public float MoveSpeed { get; set; }
     }
 }

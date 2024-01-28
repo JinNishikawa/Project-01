@@ -22,8 +22,6 @@ namespace MessagePack.Formatters.Omino.Infra.Master
         private static global::System.ReadOnlySpan<byte> GetSpan_Id() => new byte[1 + 2] { 162, 73, 100 };
         // Formation
         private static global::System.ReadOnlySpan<byte> GetSpan_Formation() => new byte[1 + 9] { 169, 70, 111, 114, 109, 97, 116, 105, 111, 110 };
-        // MoveSpeed
-        private static global::System.ReadOnlySpan<byte> GetSpan_MoveSpeed() => new byte[1 + 9] { 169, 77, 111, 118, 101, 83, 112, 101, 101, 100 };
 
         public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::Omino.Infra.Master.PartyData value, global::MessagePack.MessagePackSerializerOptions options)
         {
@@ -34,13 +32,11 @@ namespace MessagePack.Formatters.Omino.Infra.Master
             }
 
             var formatterResolver = options.Resolver;
-            writer.WriteMapHeader(3);
+            writer.WriteMapHeader(2);
             writer.WriteRaw(GetSpan_Id());
             writer.Write(value.Id);
             writer.WriteRaw(GetSpan_Formation());
             global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.IEnumerable<uint>>>(formatterResolver).Serialize(ref writer, value.Formation, options);
-            writer.WriteRaw(GetSpan_MoveSpeed());
-            writer.Write(value.MoveSpeed);
         }
 
         public global::Omino.Infra.Master.PartyData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
@@ -70,22 +66,10 @@ namespace MessagePack.Formatters.Omino.Infra.Master
                         ____result.Id = reader.ReadUInt32();
                         continue;
                     case 9:
-                        switch (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey))
-                        {
-                            default: goto FAIL;
-                            case 8028075772561485638UL:
-                                if (stringKey[0] != 110) { goto FAIL; }
+                        if (!global::System.MemoryExtensions.SequenceEqual(stringKey, GetSpan_Formation().Slice(1))) { goto FAIL; }
 
-                                ____result.Formation = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.IEnumerable<uint>>>(formatterResolver).Deserialize(ref reader, options);
-                                continue;
-
-                            case 7306369473965354829UL:
-                                if (stringKey[0] != 100) { goto FAIL; }
-
-                                ____result.MoveSpeed = reader.ReadSingle();
-                                continue;
-
-                        }
+                        ____result.Formation = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.IEnumerable<uint>>>(formatterResolver).Deserialize(ref reader, options);
+                        continue;
 
                 }
             }
