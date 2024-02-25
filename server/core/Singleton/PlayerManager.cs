@@ -2,6 +2,8 @@
 using Cysharp.Threading;
 using Core.StreamingHub;
 using UnityEngine;
+using Omino.Infra.Master;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Core.Singleton
 {
@@ -16,6 +18,8 @@ namespace Core.Singleton
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _looperPool = looperPool ?? throw new ArgumentNullException(nameof(looperPool));
+            byte[] buffer = new byte[1024];
+            var db = new MemoryDatabase(buffer);
         }
 
         public int CreateNewPlayer()

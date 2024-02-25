@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="**\package.json" />
+    <None Remove="**\*.asmdef" />
+    <None Remove="**\*.meta" />
+    <Compile Remove="Infra\Network\Generated\MagicOnion.Generated.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include=".artifacts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="shared.asmdef" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MagicOnion.Abstractions" Version="6.0.0" />
+    <PackageReference Include="MasterMemory" Version="2.4.4" />
+    <PackageReference Include="MessagePack.UnityShims" Version="2.5.140" />
+  </ItemGroup>
+</Project>
