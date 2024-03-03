@@ -10,6 +10,5 @@ namespace Omino.Infra.Master
         [PrimaryKey]
         public uint Id { get; set; }
         public IEnumerable<IEnumerable<uint>> Formation { get; set; }
-        public float MoveSpeed { get; set; }
     }
 }

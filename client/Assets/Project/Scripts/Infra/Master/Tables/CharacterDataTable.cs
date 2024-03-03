@@ -91,6 +91,7 @@ namespace Omino.Infra.Master.Tables
                     new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("Name")),
                     new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("Hp")),
                     new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("Atk")),
+                    new MasterMemory.Meta.MetaProperty(typeof(CharacterData).GetProperty("MoveSpeed")),
                 },
                 new MasterMemory.Meta.MetaIndex[]{
                     new MasterMemory.Meta.MetaIndex(new System.Reflection.PropertyInfo[] {
