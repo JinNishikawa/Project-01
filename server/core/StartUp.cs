@@ -1,5 +1,5 @@
-using Core.Sample.Singleton;
 using Cysharp.Threading;
+using Core.Singleton;
 
 namespace Core
 {
@@ -10,8 +10,6 @@ namespace Core
             services.AddGrpc();
             services.AddMagicOnion();
             services.AddSingleton<PlayerManager>();
-            services.AddSingleton<PawnManager>();
-            services.AddHostedService<LoopHostedService>();
             services.AddSingleton<ILogicLooperPool>(_ => new LogicLooperPool(60, Environment.ProcessorCount, RoundRobinLogicLooperPoolBalancer.Instance));
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\refu1\\Desktop\\Project-01\\server\\shared\\shared.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\refu1\\Desktop\\Project-01\\server\\shared\\shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\refu1\\Desktop\\Project-01\\server\\shared\\shared.csproj",
+        "projectName": "shared",
+        "projectPath": "C:\\Users\\refu1\\Desktop\\Project-01\\server\\shared\\shared.csproj",
+        "packagesPath": "C:\\Users\\refu1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\refu1\\Desktop\\Project-01\\server\\shared\\.artifacts\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\refu1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "MagicOnion.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MasterMemory": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "MessagePack.UnityShims": {
+              "target": "Package",
+              "version": "[2.5.140, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

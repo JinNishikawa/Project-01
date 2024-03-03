@@ -1,0 +1,8 @@
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\obj\Debug\netstandard2.1\shared.csproj.AssemblyReference.cache
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\obj\Debug\netstandard2.1\shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\obj\Debug\netstandard2.1\shared.csproj.CoreCompileInputs.cache
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\bin\netstandard2.1\shared.deps.json
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\bin\netstandard2.1\shared.dll
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\bin\netstandard2.1\shared.pdb
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\obj\Debug\netstandard2.1\shared.dll
+C:\Users\refu1\Desktop\Project-01\server\shared\.artifacts\obj\Debug\netstandard2.1\shared.pdb

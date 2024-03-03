@@ -10,7 +10,7 @@ services:
         source: "./client/client.sln"
         target: "/app/client/client.sln"
       - type: bind
-        source: "./client/Assets/Project/Scripts/Infra/Master"
+        source: "./server/shared/Infra/Master"
         target: "/app/client/Assets/Project/Scripts/Infra/Master"
       - type: bind
         source: "./tools"
