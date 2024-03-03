@@ -227,7 +227,7 @@
       "dependencies": {}
     },
     "shared": {
-      "version": "file:C:/Users/refu1/Desktop/Project-01/server/shared",
+      "version": "file:../../server/shared",
       "depth": 0,
       "source": "local",
       "dependencies": {}
